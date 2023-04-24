@@ -10349,8 +10349,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
+html, body {
+  max-width: fit-content;
+}
+
 .background {
   width: 100%;
+  max-width: 100vw;
   position: fixed;
   z-index: -10;
   height: 100vh;
@@ -10382,6 +10387,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   }
 }
 
+@media all and (max-width: 500px) {
+  .motivation {
+    padding: 20px 10vw !important;
+  }
+  .motivation .columns {
+    padding: 0 !important;
+  }
+  .motivation .columns .column {
+    padding: 0 !important;
+  }
+}
+
 @media all and (min-width: 769px) {
   .reasons .reason .box {
     width: 100%;
@@ -10396,6 +10413,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   display: grid;
 }
 
+@media all and (max-width: 490px) {
+  .reasons {
+    padding: 20px 10vw !important;
+  }
+  .reasons h2 {
+    padding: 20px 0 !important;
+  }
+}
 .reasons .custom.grid {
   grid-template-columns: 3fr 6fr;
   gap: 20px;
@@ -10411,6 +10436,11 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     grid-template-columns: 1fr;
   }
 }
+@media all and (max-width: 1115px) and (max-width: 400px) {
+  .reasons .custom.grid {
+    padding: 20px !important;
+  }
+}
 .reasons .custom.grid .col .grid {
   grid-template-columns: 1fr 1fr;
 }
@@ -10419,11 +10449,45 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     grid-template-columns: 1fr;
   }
 }
+@media all and (max-width: 490px) {
+  .reasons .custom.grid .col .grid {
+    padding: 20px 0 !important;
+  }
+  .reasons .custom.grid .col .grid .column {
+    padding: 0;
+  }
+}
 
+@media all and (max-width: 600px) {
+  .services {
+    padding: 3rem 10vw !important;
+  }
+}
+@media all and (max-width: 600px) {
+  .services h2 {
+    padding: 0 !important;
+  }
+}
+@media all and (max-width: 600px) {
+  .services .columns {
+    padding: 20px 0 !important;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .faqs {
+    padding: 0 !important;
+  }
+}
 @media all and (max-width: 1115px) {
   .faqs .columns {
     flex-direction: column-reverse;
     align-items: center;
+  }
+}
+@media all and (max-width: 600px) {
+  .faqs .columns {
+    padding: 20px 10px !important;
   }
 }
 
@@ -10451,6 +10515,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .values .icon {
   clip-path: circle();
+}
+
+footer .is-flex:nth-of-type(2) {
+  flex-wrap: wrap;
+}
+footer hr {
+  background-color: #277FF2;
+  box-shadow: 0 0 10px 1px #327AD9;
 }
 
 /*# sourceMappingURL=main.css.map */
