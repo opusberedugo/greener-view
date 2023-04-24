@@ -1,0 +1,135 @@
+@import "./bulma/bulma";
+
+@mixin media-min($width){
+  @media all and (min-width:$width){
+    @content;
+  }
+}
+
+@mixin media-max($width){
+  @media all and (max-width:$width){
+    @content;
+  }
+}
+
+.background{
+  width: 100%;
+  position: fixed;
+  z-index: -10;
+  height: 100vh;
+  background-image: url("../img/hero.jpeg");
+  background-repeat: none;
+  background-size: cover;
+  img{
+    width: 100%;
+    display: block;
+  }
+}
+
+.hero{
+  background-image: linear-gradient(#7BB29C8f, #7BB29C8f);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.about{
+  padding: 20px 10vw !important;
+  .columns{
+    @include media-max(1000px){
+      flex-direction: column-reverse;
+      align-items: center;
+      .column:nth-of-type(2){
+        padding:0 50px ;
+      }
+    }
+  }
+}
+
+
+
+.reasons{
+  .reason{
+    .box{
+      @include media-min(769px){
+        width: 100%;
+      }
+      img{
+        max-width: 80px !important;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.grid{
+  display: grid;
+}
+
+.reasons{
+  .custom.grid{
+    grid-template-columns: 3fr 6fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;justify-items: center;
+    align-items: center;
+    justify-content: center;
+    @include media-max(1115px){
+      grid-template-columns: 1fr;
+    }
+    .col{
+      .grid{
+        grid-template-columns: 1fr 1fr;
+        @include media-max(736px){
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}
+
+.faqs{
+  .columns{
+    @include media-max(1115px){
+      flex-direction: column-reverse;
+      align-items: center;
+
+    }
+  }
+}
+
+.contact{
+  @include media-max(600px){
+    padding: 3rem 20px !important;
+    .container{
+      padding: 0 10px !important;
+      .box{
+        padding: 0 20px !important;
+      }
+    }
+  }
+  form{
+    button{
+      width: 100% !important;
+    }
+  }
+  textarea{
+    resize: none;
+  }
+}
+
+.testimonials{
+  .column{
+    img{
+      max-width: 60px;
+    }
+  }
+}
+
+.values{
+  .icon{
+    clip-path: circle();
+  }
+}
